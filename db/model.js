@@ -1,4 +1,6 @@
 const mongoose = require("mongoose")
+
+// This is the schema of the user
 const schema = new mongoose.Schema({
     name : {
         type : String,
@@ -14,4 +16,6 @@ const schema = new mongoose.Schema({
         required : true
     }
 })
+
+// This is model of that schema
 module.exports = mongoose.model("userinfo",schema)
