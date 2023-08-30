@@ -11,6 +11,9 @@ require("dotenv").config()
 app.use(express.json())
 app.use(express.urlencoded({extended : false}))
 
+// Connecting to the database
+require("./db/connection")
+
 // Importing signup routing
 const signup = require("./routes/signup/signup")
 app.use("/signup",signup)
