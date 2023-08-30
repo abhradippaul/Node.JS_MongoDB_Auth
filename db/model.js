@@ -2,11 +2,9 @@ const mongoose = require("mongoose")
 
 // This is the schema of the user
 const schema = new mongoose.Schema({
-    name : {
-        type : String,
-        required : true
-    },
+    name : String,
     age : Number,
+    gender : String,
     email : {
         type : String,
         required : true
@@ -14,7 +12,8 @@ const schema = new mongoose.Schema({
     password : {
         type : String,
         required : true
-    }
+    },
+    image : String
 })
 
 // This is model of that schema
